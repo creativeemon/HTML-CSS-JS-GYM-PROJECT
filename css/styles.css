@@ -123,4 +123,41 @@ header{
     background-color: #e6e600;
 }
 
+/* @media */
+@media (max-width: 768px) {
+    nav{
+        padding: 0 20px;
+    }
+   .nav-toggle{
+    display: flex;
+    }
+   
+    .nav-links{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: #000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .nav-links.active{
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+    }
+    .nav-toggle.active span:nth-child(1){
+        transform:  translateY(9px) rotate(45deg);
+    }
+    .nav-toggle.active span:nth-child(2){
+       opacity: 0;
+    }
+    .nav-toggle.active span:nth-child(3){
+        transform:  translateY(-9px) rotate(-45deg);
+    }
+}
