@@ -7,10 +7,10 @@
 }
 
 html, body {
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     position: relative;
-    background: black;
+    /* background: black; */
 }
 
 .container{
@@ -40,8 +40,8 @@ header{
 }
 .logo{
     color: white;
-    /* font-size: 24px;
-    font-weight: bold; */
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .logo img{
@@ -141,6 +141,7 @@ header{
         background: #000;
         flex-direction: column;
         align-items: center;
+        gap: 40px;
         justify-content: center;
     }
 
@@ -160,4 +161,19 @@ header{
     .nav-toggle.active span:nth-child(3){
         transform:  translateY(-9px) rotate(-45deg);
     }
+    .hero{
+        padding: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: calc(60%);
+        height: 80vh;
+
+    }
+
+    .hero-content h1{
+        font-size: 40px;
+        width: 100%;
+    }
 }
+
+

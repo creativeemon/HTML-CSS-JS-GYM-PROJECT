@@ -1,6 +1,6 @@
 const navToggle = document.getElementById("navToggle")
 const navLinks = document.getElementById("navLinks")
-
+// toggle navigation
 navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active')
     navLinks.classList.toggle('active')
@@ -14,3 +14,5 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active')
     } )
 })
+
+// TODO: Scroll to the section
