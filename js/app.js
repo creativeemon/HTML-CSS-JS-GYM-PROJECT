@@ -15,4 +15,25 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     } )
 })
 
-// TODO: Scroll to the section
+// navigation smooth scrolling
+const item = document.querySelectorAll('a[href^="#"]')
+item.forEach(anchor => {
+    anchor.addEventListener("click", () => {
+       e.preventDefault();
+        document.querySelector(this.getAttribute('href'.scrollIntoView({
+           behavior: 'smooth'
+       })))
+   })
+})
+
+
+// add background when scrolling
+window.addEventListener('scroll' ,function(){
+    const header = document.querySelector('header');
+    if (this.window.scrollY > 50) {
+        header.style.backgroundColor = '#000000';
+        header.style.transition = 'background-color 0.3s ease'
+    } else {
+        header.style.backgroundColor = 'transparent';
+    }
+})
