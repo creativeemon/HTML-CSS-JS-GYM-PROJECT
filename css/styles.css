@@ -475,3 +475,116 @@ header{
         height: 300px;
     }
 }
+
+/* trainer section */
+
+.trainers{
+    padding-top: 120px;
+    padding-bottom: 100px;
+    background-color: black;
+    color: white;
+}
+
+.trainers h2{
+    font-style: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.trainers-grid{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trainer-card{
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+}
+
+.trainer-card:hover{
+  transform: translateY(-5px);
+}
+
+.trainer-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.trainer-card h3{
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-style: 20px;
+
+}
+
+.social-link{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 15px 15px ;
+}
+
+.social-icon{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img{
+    width: 12px;
+    height: 12px;
+}
+
+.social-icon:hover{
+    background-color: yellow;
+}
+
+/* responsive design */
+
+@media (max-width: 1200px) {
+    .trainers-grid {
+            
+            grid-template-columns: repeat(3, 1fr);
+           
+        }
+ 
+}
+
+@media (max-width: 768px) {
+    .trainers-grid {
+    
+            grid-template-columns: repeat(2, 1fr);
+           
+        }
+                .trainers h2 {
+                    font-style: 36px;
+                 
+                }
+}
+
+@media (max-width: 480px) {
+    .trainers-grid {
+    
+            grid-template-columns: 1fr;
+    
+        }
+    
+        .trainers h2 {
+            font-style: 28px;
+    
+        }
+}
